@@ -1,0 +1,7 @@
+{
+  "name": "fogadj-orokbe",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
