@@ -8,8 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ZipfilterPipe } from './shared/pipe/zipfilter.pipe';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 

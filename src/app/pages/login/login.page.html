@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Bejelentkezés</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ul class="navbar-nav text-center">
+    <li class="nav-item">
+
+      <div class="logindiv">
+        <form [formGroup]="loginForm" (ngSubmit)="login()" class="form-horizontal pb-2" method="post"
+          accept-charset="UTF-8">
+
+          <!-- formControlName="loginForm"  -->
+
+
+          <h6 style="padding-bottom: 5px;">Jelentkezz be!</h6>
+          <input class="form-control" type="text" formControlName="username" width="100px"
+            placeholder="Név.."><br>
+          <input class="form-control" type="password" formControlName="password" placeholder="Jelszó.."><br>
+          <button type="button" type="submit" name="submit" value="login"
+            class="btn btn-secondary">Bejelentkezés</button>
+          <hr>
+          <h6 style="padding-top: 5px; padding-bottom: 5px;">Nincs még felhasználói fiókod?</h6>
+          <button type="button" routerLink="/register" class="btn btn-secondary">Regisztráció</button>
+          
+
+
+
+        </form>
+      </div>
+    </li>
+
+  </ul>
+</ion-content>

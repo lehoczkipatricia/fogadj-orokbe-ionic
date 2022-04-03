@@ -66,13 +66,13 @@ export class CatsPage implements OnInit {
 
   adoptCat(){
     let adopted = true;
-    this.petId = Number(this.petId);
-    this.petName = this.petName.toString();
-    this.petBName = this.petBName.toString();
-    this.petAge = Number(this.petAge);
+    // this.petId = Number(this.petId);
+    // this.petName = this.petName.toString();
+    // this.petBName = this.petBName.toString();
+    // this.petAge = Number(this.petAge);
 
-    this.petSheltersId = Number(this.petSheltersId);
-    this.petSName = this.petSName.toString();
+    // this.petSheltersId = Number(this.petSheltersId);
+    // this.petSName = this.petSName.toString();
 
 
 

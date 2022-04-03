@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from './shared/auth/auth.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -7,10 +9,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public appPages = [
     { title: 'Főoldal', url: 'main', icon: 'home' },
-    { title: 'Macskák', url: '/cats', icon: 'cat' },
+    { title: 'Macskák', url: '/cats', icon: 'assets/icons/cat-icon.png' },
     { title: 'Kutyák', url: '/dogs', icon: 'dog' },
-    { title: 'Rólunk', url: '/about', icon: 'about' }
+    { title: 'Rólunk', url: '/about', icon: 'about' },
+    { title: 'Bejelentkezés', url: '/login', icon: 'login' },
+    { title: 'Kijelentkezés', url: '/logout', icon: 'logout' }
   ];
   // public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  constructor(public auth: AuthService) {}
 }

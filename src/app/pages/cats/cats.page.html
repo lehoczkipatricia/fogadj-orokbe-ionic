@@ -45,62 +45,26 @@
             <div *ngIf="pet.gender == false">
               <p class="card-text">Neme: hím</p>
           </div>
-          <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="getPetId(id, bname, path, name, age, gender, neutered, shelter, sname)"
-          class="btn btn-primary mt-2">
-            Bővebb infót szeretnék!
-          </button>
-          
-      </div>
-    </div>
-  
-  
-  </div>
-  </div>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-  
-          <div class="modal-header">
-            <!-- <h5 class="modal-title" id="exampleModalLabel">{{pet.name}}</h5> -->
-            <h5 class="modal-title" id="exampleModalLabel">{{this.petName}}</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div *ngIf="pet.neutered == false">
+            <p>Ivartalanított-e: Igen</p>
           </div>
-          <div class="modal-body text-start d-flex flex-row justify-content-around">
-            
-            <div>
-            <img src= "http://localhost:8000/images/pets/cats/{{this.petPath}}.jpg" class="card-img-top img-thumbnail" id="cat-picture" alt="Card image cap">
-            </div>
-            <div class="p-4">
-                <p class="">Neve: {{this.petName}}</p>
-                <p class="">Kora: {{this.petAge}} éves</p>
-                <p class="">Fajtája: {{this.petBName}}</p>
-                <div *ngIf="this.petGender == false">
-                  <p class="">Neme: hím</p>
-                </div>
-                <div *ngIf="this.petGender == true">
-                  <p class="">Neme: nőstény</p>
-                </div>
-                <div *ngIf="this.petNeutered == false">
-                  <p>Ivartalanított-e: Igen</p>
-                </div>
-                <div *ngIf="this.petNeutered == true">
-                  <p>Ivartalanított-e: Nem</p>
-                </div>
-                
-                
-          </div>
+          <div *ngIf="pet.neutered == true">
+            <p>Ivartalanított-e: Nem</p>
           </div>
           <p class="text-center" *ngIf="isLoggedIn()">Ha szeretnéd örökbefogadni a cicát, nyomj az Örökbefogadom! gombra!</p>
           <p class="text-center" *ngIf="!isLoggedIn()">Ha szeretnéd örökbefogadni a cicát, előbb regisztrálj vagy jelentkezz be!!</p>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezár</button>
-            <button type="submit" class="btn btn-primary" *ngIf="isLoggedIn()" (click)="adoptCat()" data-bs-dismiss="modal">Örökbefogadom!</button>
-          </div>
+          <button type="submit" class="btn btn-primary"(click)="adoptCat()" data-bs-dismiss="modal">Örökbefogadom!</button>
+          <button type="submit" class="btn btn-primary" *ngIf="isLoggedIn()" (click)="adoptCat()" data-bs-dismiss="modal">Örökbefogadom!</button>
+          
+          
   
       </div>
     </div>
     </div>
+
+          
+      </div>
+ 
   
   
 </ion-content>
